@@ -12,7 +12,7 @@ RUN yum install -y maven
 RUN curl -sL https://rpm.nodesource.com/setup_8.x
 RUN yum install -y nodejs
 RUN npm install -g @angular/cli
-COPY target/TESTBACK /opt/tomcat/webapps
+COPY target/TESTBACK.war /opt/tomcat/webapps
 RUN sed -i 's/port="8080"/port="6060"/' /opt/tomcat/conf/server.xml
 WORKDIR /opt/tomcat/bin
 EXPOSE 6060
