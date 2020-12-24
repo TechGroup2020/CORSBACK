@@ -12,7 +12,6 @@ RUN yum install -y maven
 RUN curl -sL https://rpm.nodesource.com/setup_8.x
 RUN yum install -y nodejs
 RUN npm install -g @angular/cli
-ENTRYPOINT ["java","-jar","/TESTBACK.jar"]
 COPY target/TESTBACK /opt/tomcat/webapps
 RUN sed -i 's/port="8080"/port="6060"/' /opt/tomcat/conf/server.xml
 WORKDIR /opt/tomcat/bin
@@ -20,4 +19,5 @@ EXPOSE 6060
 RUN cd /opt/tomcat/bin
 RUN rm -r -f /opt/del/
 CMD ["./catalina.sh" ,"start"]
+ENTRYPOINT ["java","-jar","/TESTBACK.jar"]
 
