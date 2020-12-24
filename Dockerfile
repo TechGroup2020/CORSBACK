@@ -19,5 +19,5 @@ EXPOSE 6060
 RUN cd /opt/tomcat/bin
 RUN rm -r -f /opt/del/
 CMD ["./catalina.sh" ,"start"]
-ENTRYPOINT ["java","-jar","/TESTBACK.jar"]
+
 
