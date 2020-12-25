@@ -7,3 +7,4 @@ third test
 6th test
 Testing with aws
 Testing with aws by adding permission
+Edited the script file
